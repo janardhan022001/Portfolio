@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,6 +10,7 @@ import SkillsPage from "./pages/SkillsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
+import "./index.css";
 
 const queryClient = new QueryClient();
 
@@ -31,4 +33,4 @@ const App = () => (
   </QueryClientProvider>
 );
 
-export default App;
+createRoot(document.getElementById("root")!).render(<App />);
